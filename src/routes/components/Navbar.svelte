@@ -39,6 +39,7 @@
 		padding: 14px 16px 8px 16px;
 		text-decoration: none;
 		opacity: 0.4;
+    transition: 0.3s;
 	}
 
 	/* Change the link color to #111 (black) on hover */

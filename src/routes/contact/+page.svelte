@@ -4,6 +4,7 @@
 	import phone from '$lib/images/phone.svg';
 	import mail from '$lib/images/mail.svg';
 	import linkedin from '$lib/images/linkedin.svg';
+	import contactMe from '$lib/images/contact-me.jpg';
 
 	import { page } from '$app/stores';
 	import { onMount } from 'svelte';
@@ -30,7 +31,7 @@
 					<input class="submit" type="submit" value="Enviar" />
 				</form>
 			</div>
-			<div class="contactInfo">
+			<div class="contactInfo">				
 				<div class="contactBox">
 					
 					<a href="https://goo.gl/maps/DERwaAaXaprhhEU1A" target="_blank" rel="noreferrer"
@@ -50,6 +51,7 @@
 						><img class="icon" src={linkedin} alt="linkedin." />&ensp;Concepción, Chile</a
 					>
 				</div>
+				<img class="contactMe" src={contactMe} alt="contact me"/>
 			</div>
 		</div>
 	</div>
@@ -140,9 +142,9 @@
 		-webkit-flex: 1;
 		-ms-flex: 1;
 		flex: 1;
-		border: 1px solid red;
 		display: flex;
 		flex-direction: column-reverse;
+		padding-top: 20px;
 	}
 
 	.contactBox {
@@ -156,6 +158,11 @@
 		height: 20px;
 		width: 20px;
 		vertical-align: bottom;
+	}
+
+	.contactMe {
+		width: 100%;
+		border-radius: 5px;
 	}
 
 	a {
