@@ -3,11 +3,9 @@
 </script>
 
 <div class="app">
-
 	<main>
 		<slot />
 	</main>
-
 </div>
 
 <style>
@@ -23,6 +21,4 @@
 		flex-direction: column;
 		box-sizing: border-box;
 	}
-
-	
 </style>
