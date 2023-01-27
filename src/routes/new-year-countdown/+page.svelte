@@ -106,6 +106,7 @@
 		display: flex;
 		flex-direction: column;
 		flex: 0.6;
+		padding: 0px;
 	}
 
 	.sub-container {

@@ -1,17 +1,21 @@
 @import '@fontsource/fira-mono';
 
 :root {
-	--font-body: Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+	--font-body: Ubuntu,
 		Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 	--font-mono: 'Fira Mono', monospace;
-	--color-bg-0: rgb(202, 216, 228);
-	--color-bg-1: white;
-	--color-bg-2: hsl(224, 44%, 95%);
-	--color-theme-1: #ff3e00;
+	--color-bg-0: #3e848e;
+	--color-bg-1: #254e54;
+	--color-bg-2: #567189;
+	--color-bg-3: #ffffff;
+	--color-bg-grey: #deedef;;
+	--color-theme-1: #193438;
 	--color-theme-2: #4075a6;
-	--color-text: black;
+	--color-text: #ffffff;
+	--color-text-2: #193438;
 	--column-width: 42rem;
 	--column-margin-top: 4rem;
+	--global-padding: 200px;
 	font-family: var(--font-body);
 	color: var(--color-text);
 }
@@ -20,7 +24,8 @@ body {
 	background-repeat: no-repeat;
 	background-size: 100%;
 	background-position: center;
-	margin: 0
+	background: var(--color-bg-0);
+	margin: 0;
 }
 
 h1,
@@ -95,4 +100,21 @@ button:focus:not(:focus-visible) {
 	position: absolute;
 	width: 1px;
 	white-space: nowrap;
+}
+
+.main-container {
+	border: 1px solid red;
+	padding: 100px var(--global-padding) 0px var(--global-padding);
+}
+
+@media (max-width: 940px) {
+	:root {
+		--global-padding: 100px;
+	}
+}
+
+@media (max-width: 640px) {
+	:root {
+		--global-padding: 0px;
+	}
 }
