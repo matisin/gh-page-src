@@ -1,0 +1,62 @@
+ul {
+  position: fixed;
+  top: 0;
+  width: calc(100% - var(--global-padding) - var(--global-padding));
+  background: var(--primaryColor);
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  float: right;
+}
+
+li a {
+  display: block;
+  color: var(--light-text);
+  text-align: center;
+  padding: 14px 16px 8px 16px;
+  text-decoration: none;
+  opacity: 0.4;
+  transition: 0.3s;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: var(--secondary-color);
+  text-decoration: none;
+  opacity: 1;
+  transition: 0.3s;
+}
+
+li button {
+  float: right;
+  padding: 2px;
+  width: 42px;
+  background: var(--primary-color);
+  height: 42px;
+  border: none;
+  text-align: center;
+}
+
+li button:hover {
+  cursor: pointer;
+  background-color: var(--secondary-color);
+}
+
+.active {
+  opacity: 1;
+  border-bottom: 2px solid var(--light-text);
+}
+
+.nav-icon {
+  width: 30px;
+  padding: 5px;
+  transition: 0.3s;
+}
+
+li.responsive {
+  float: none;
+  list-style-type:circle;
+}

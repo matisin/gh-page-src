@@ -1,0 +1,126 @@
+h2 {
+  text-align: left;
+  color: var(--dark-text);
+}
+
+h3 {
+  text-align: left;
+  color: var(--dark-text);
+  font-weight: 300;
+}
+
+input {
+  font-size: 13px;
+  border-radius: 4px;
+  line-height: 1.5;
+  padding: 5px 10px;
+  transition: box-shadow 100ms ease-in, border 100ms ease-in, background-color 100ms ease-in;
+  color: var(--dark-text);
+  background: var(--input-color);
+  display: block;
+  height: 30px;
+  margin: 20px 0px;
+  width: calc(100% - 40px);
+  border: 1px solid transparent;
+}
+
+textarea {
+  font-family: var(--font-body);
+  font-size: 13px;
+  border-radius: 4px;
+  line-height: 1.5;
+  padding: 5px 10px;
+  transition: box-shadow 100ms ease-in, border 100ms ease-in, background-color 100ms ease-in;
+  
+  color: var(--dark-text);
+  background: var(--input-color);
+  display: block;
+  height: 185px;
+  margin: 10px 0px;
+  width: calc(100% - 40px);
+  resize: none;
+  border: 1px solid transparent;
+}
+
+input.submit {
+  background: var(--accent-color);
+  color: var(--light-text);
+  height: 45px;
+  width: calc(100% - 20px);
+  cursor: pointer;
+  font-size: 23px;
+  font-weight: 500;
+  margin-bottom: 0px;
+  transition: 0.3s;
+}
+
+input.submit:hover {
+  background: var(--color-bg-2);
+}
+
+.contact {
+  background: var(--light-background);
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  border-radius: 7px;
+  padding: 10px 40px 40px 40px;
+}
+
+.mail {
+  -webkit-flex: 3;
+  -ms-flex: 3;
+  flex: 3;
+}
+
+.contactInfo {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: flex;
+  flex-direction: column-reverse;
+  padding-top: 20px;
+}
+
+.contactBox {
+  margin: 10px 0px;
+  width: max-content;
+}
+
+.icon {
+  height: 20px;
+  width: 20px;
+  vertical-align: bottom;
+}
+
+.contactMe {
+  width: 100%;
+  border-radius: 5px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 940px) {
+  .contact {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+
+  input {
+    width: calc(100% - 20px);
+  }
+
+  input.submit {
+    width: calc(100%);
+  }
+
+  textarea {
+    width: calc(100% - 20px);
+  }
+}

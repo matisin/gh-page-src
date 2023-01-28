@@ -1,8 +1,5 @@
 <script>
 	import Navbar from './components/Navbar.svelte';
-	import { page } from '$app/stores';
-	import { onMount } from 'svelte';
-	import moment from 'moment';
 </script>
 
 <section>

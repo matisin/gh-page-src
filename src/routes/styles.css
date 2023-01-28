@@ -4,27 +4,31 @@
 	--font-body: Ubuntu,
 		Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 	--font-mono: 'Fira Mono', monospace;
-	--color-bg-0: #3e848e;
-	--color-bg-1: #254e54;
+	--primary-color: #2072BB;
+	--secondary-color: #125b96;
+	--light-text: #ffffff;
+	--input-color: #CFE8FF;
+	--input-text: #8DB8E2;
+	--accent-color: #FF6B76;
+	--dark-text: #034670;
 	--color-bg-2: #567189;
-	--color-bg-3: #ffffff;
-	--color-bg-grey: #deedef;;
-	--color-theme-1: #193438;
+	--light-background: #ffffff;	
+	--dark-text: #193438;
 	--color-theme-2: #4075a6;
-	--color-text: #ffffff;
-	--color-text-2: #193438;
+	
+
 	--column-width: 42rem;
 	--column-margin-top: 4rem;
 	--global-padding: 200px;
 	font-family: var(--font-body);
-	color: var(--color-text);
+	color: var(--light-text);
 }
 
 body {
 	background-repeat: no-repeat;
 	background-size: 100%;
 	background-position: center;
-	background: var(--color-bg-0);
+	background: var(--primary-color);
 	margin: 0;
 }
 
@@ -39,7 +43,7 @@ p {
 }
 
 a {
-	color: var(--color-theme-1);
+	color: var(--dark-text);
 	text-decoration: none;
 }
 
@@ -68,7 +72,7 @@ pre {
 	border-radius: 3px;
 	box-shadow: 2px 2px 6px rgb(255 255 255 / 25%);
 	padding: 0.5em;
-	color: var(--color-text);
+	color: var(--light-text);
 }
 
 .text-column {
