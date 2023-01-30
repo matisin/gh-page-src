@@ -1,0 +1,140 @@
+$starFieldWidth: 2560;
+$starFieldHeight: 2560;
+$starStartOffset: 600px;
+
+$starOneScrollDuration: 100s;
+$starTwoScrollDuration: 125s;
+$starThreeScrollDuration: 175s;
+$numStarOneStars: 1700;
+$numStarTwoStars: 700;
+$numStarThreeStars: 200;
+$numComet: 10;
+
+h3 {
+    text-align: center;
+}
+
+.main-container {
+    height: 100vh;
+    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+    display: flex;
+    flex-direction: column;
+    flex: 0.6;
+    padding: 0px;
+}
+
+.sub-container {
+    margin-top: 200px;
+}
+
+section {
+    min-width: max-content;
+
+    flex: 0.6;
+}
+
+.sky {
+    width: 100vh;
+}
+
+h1,
+h3,
+h2 {
+    color: white;
+    width: 100%;
+    text-shadow: 2px 7px 5px rgba(0, 0, 0, 0.3), 0px -4px 10px rgba(255, 255, 255, 0.3);
+}
+
+h3 {
+    font-size: 3vh;
+}
+
+.countdown {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.box h1 {
+    font-size: 15vh;
+    margin: 10px 0px 10px 0px;
+}
+
+.dots h1 {
+font-size: 15vh;
+    margin: 0px 0px 50px 0px;
+}
+
+.box h2 {
+    margin: 10px 0px 20px 0px;
+    font-size: 2vh;
+    text-align: center;
+    font-weight: 800;
+}
+
+@function create-stars($n) {
+    $stars: '#{random($starFieldWidth)}px #{random($starFieldHeight)}px #FFF';
+
+    @for $i from 2 through $n {
+        $stars: '#{$stars} , #{random($starFieldWidth)}px #{random($starFieldHeight)}px #FFF';
+    }
+    @return unquote($stars);
+}
+
+@mixin star-template($numStars, $starSize, $scrollSpeed) {
+    z-index: 10;
+    width: $starSize;
+    height: $starSize;
+    border-radius: 50%;
+    background: transparent;
+    box-shadow: create-stars($numStars);
+    animation: animStar $scrollSpeed linear infinite;
+    &:after {
+        content: ' ';
+        top: -$starStartOffset;
+        width: $starSize;
+        height: $starSize;
+        border-radius: 50%;
+        position: absolute;
+        background: transparent;
+        box-shadow: create-stars($numStars);
+    }
+}
+
+@mixin shooting-star-template($numStars, $starSize, $speed) {
+    z-index: 10;
+    width: $starSize;
+    height: $starSize + 80px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+    animation: animShootingStar $speed linear infinite;
+}
+
+.stars {
+    @include star-template($numStarOneStars, 1px, $starOneScrollDuration);
+}
+.stars2 {
+    @include star-template($numStarTwoStars, 2px, $starTwoScrollDuration);
+}
+.stars3 {
+    @include star-template($numStarThreeStars, 3px, $starThreeScrollDuration);
+}
+.comet {
+    @include shooting-star-template($numComet, 5px, 10s);
+}
+
+@keyframes animShootingStar {
+    from {
+        transform: translateY(0px) translateX(0px) rotate(-45deg);
+        opacity: 1;
+        height: 5px;
+    }
+    to {
+        transform: translateY(-#{$starFieldHeight}px) translateX(-#{$starFieldWidth}px) rotate(-45deg);
+        opacity: 1;
+        height: 800px;
+    }
+}

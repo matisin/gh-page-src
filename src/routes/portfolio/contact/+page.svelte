@@ -1,5 +1,5 @@
 <script>
-	import Navbar from '../components/Navbar.svelte';
+	import Navbar from '$lib/components/navbar/Navbar.svelte';
 	import location from '$lib/images/location.svg';
 	import phone from '$lib/images/phone.svg';
 	import mail from '$lib/images/mail.svg';

@@ -1,14 +1,10 @@
 <script>
-	import Navbar from './components/Navbar.svelte';
 </script>
 
 <section>
 	<div class="main-container">
-		<Navbar />
 		<h1>
-			Hola, soy Matías Medina<br />
-			un desarrollador full-stack<br />
-			de Concepción, Chile
+			Esta página es para juntar todas las páginas estupidas que se me ocurran
 		</h1>
 	</div>
 </section>
