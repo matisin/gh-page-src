@@ -51,7 +51,7 @@ input.submit {
   font-size: 23px;
   font-weight: 500;
   margin-bottom: 0px;
-  transition: 0.3s;
+  transition: background 0.3s;
 }
 
 input.submit:hover {

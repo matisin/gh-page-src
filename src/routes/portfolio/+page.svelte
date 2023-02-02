@@ -1,13 +1,5 @@
-<script>
-	import Navbar from '$lib/components/navbar/Navbar.svelte';
-	import { page } from '$app/stores';
-	import { onMount } from 'svelte';
-	import moment from 'moment';
-</script>
-
 <section>
 	<div class="main-container">
-		<Navbar />
 		<h1>
 			Hola, soy Matías Medina<br />
 			un desarrollador full-stack<br />

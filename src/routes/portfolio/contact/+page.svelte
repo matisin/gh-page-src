@@ -1,16 +1,14 @@
 <script>
-	import Navbar from '$lib/components/navbar/Navbar.svelte';
 	import location from '$lib/images/location.svg';
 	import phone from '$lib/images/phone.svg';
 	import mail from '$lib/images/mail.svg';
 	import linkedin from '$lib/images/linkedin.svg';
 	import contactMe from '$lib/images/contact-me.jpg';
-	import './styles.css';
+	import './contact.styles.css';
 </script>
 
 <section>
 	<div class="main-container">
-		<Navbar />
 		<div class="contact">
 			<div class="mail">
 				<h2>Contáctame</h2>

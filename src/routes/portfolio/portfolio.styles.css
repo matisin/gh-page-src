@@ -16,7 +16,7 @@
 	--dark-text: #193438;
 	--color-theme-2: #4075a6;
 
-	--navbar-height: 42px;
+	--top-global-padding: 150px;
 	
 
 	--column-width: 42rem;
@@ -32,6 +32,19 @@ body {
 	background-position: center;
 	background: var(--primary-color);
 	margin: 0;
+}
+
+.app {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+main {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	box-sizing: border-box;
 }
 
 h1,
@@ -63,7 +76,7 @@ h2 {
 }
 
 h3 {
-	text-align: center;
+	text-align: left;
 	font-size: 1rem;
 }
 
@@ -86,12 +99,6 @@ pre {
 	margin: 0 auto;
 }
 
-input,
-button {
-	font-size: inherit;
-	font-family: inherit;
-}
-
 button:focus:not(:focus-visible) {
 	outline: none;
 }
@@ -109,18 +116,19 @@ button:focus:not(:focus-visible) {
 }
 
 .main-container {
-	border: 1px solid red;
-	padding: var(--navbar-height) var(--global-padding) 0px var(--global-padding);
+	padding: var(--top-global-padding) var(--global-padding) 0px var(--global-padding);
 }
 
 @media (max-width: 940px) {
 	:root {
 		--global-padding: 100px;
+		--top-global-padding: 100px;
 	}
 }
 
 @media (max-width: 640px) {
 	:root {
 		--global-padding: 0px;
+		--top-global-padding: 42px;
 	}
 }
